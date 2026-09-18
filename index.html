@@ -1191,18 +1191,9 @@
                     return;
                 }
 
-                const hasAppLock = await this.hasAppLockConfigured();
-                this.showAuthScreen();
-                if (!hasAppLock) {
-                    // Signed in with Google, but this device has never had an
-                    // app lock password set up - require one before any vault
-                    // data can be created or read.
-                    this.showAuthStep('setup');
-                } else {
-                    this.isLocked = true;
-                    this.showAuthStep('unlock');
-                }
-            }
+                this.showAppScreen();
+            
+            
 
             // ========== DATABASE ==========
             async initDB() {
