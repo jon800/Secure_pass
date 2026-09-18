@@ -2232,9 +2232,7 @@
              */
             showAuthStep(step, message) {
                 const steps = { google: 'googleSignInStep', setup: 'appLockSetupStep', unlock: 'appLockUnlockStep' };
-                Object.values(steps).forEach(id => {
-                    document.getElementById(id).style.display = 'none';
-                });
+                Object. values(steps).forEach(id =\> { const element = document.getElement Byld(id); if (element) { element.style.display = 'none'; }
                 document.getElementById(steps[step]).style.display = 'flex';
 
                 const subtitles = {
